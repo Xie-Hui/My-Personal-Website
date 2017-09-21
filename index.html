@@ -7,144 +7,56 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAERERERERERERERERERERERERERERERERERAAAAAAEREREAAAAAAREREQABERERERERAAEREREREREAAAAAEREREQAAAAARERERAAEREREREREAAREREREREQAAAAABERERAAAAAAEREREREREREREREREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" type="image/x-icon">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700' rel='stylesheet' type='text/css'>
-        <style>
-            html, body {
-                overflow: hidden;
-                margin: 0;
-            }
-            body {
-                font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
-                color: #333;
-            }
-            #wrapper {
-                position: absolute;
-                left: 0;
-                width: 320px;
-                text-align: center;
-                top: 50%;
-                left: 50%;
-                margin-left: -160px;
-                margin-top: -160px;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                user-select: none;
-            }
-            h1 {
-                font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-                font-weight: 700;
-                font-size: 30px;
-                letter-spacing: 9px;
-                text-transform: uppercase;
-                margin: 12px 0;
-                left: 4px;
-            }
-            h2 {
-                color: #999;
-                font-weight: normal;
-                font-size: 15px;
-                letter-spacing: .12em;
-                margin-bottom: 30px;
-                left: 3px;
-            }
-            h1, h2 {
-                position: relative;
-            }
-            p {
-                font-size: 14px;
-                line-height: 2em;
-                margin: 0;
-                letter-spacing: 2px;
-            }
-            canvas {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 0;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-            }
-            a {
-                color: #999;
-                text-decoration: none;
-                transition: color .2s ease;
-            }
-            a:hover {
-                color: #f33;
-            }
-        </style>
-        <script type="text/javascript">
-
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-38965494-1']);
-          _gaq.push(['_setDomainName', 'evanyou.me']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-
-        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href='css/style.css' rel="stylesheet" type='text/css'>
     </head>
     <body>
+        <!-- Navbar -->
+        <!-- Navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">Hui Xie</a>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Design</li>
+                            <li><a href="#panda">Panda</a></li>
+                            <li><a href="#mvp-landing">MVP Landing</a></li>
+                            <li><a href="#tribute-page">Tribute Page</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Web</li>
+                            <li><a href="#flip-crash-app">Flip Crash</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Desktop</li>
+                            <li><a href="#grapher">Graphing Utility</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#favourites">Blogs</a></li>
+                    <li><a href="#faq">About me</a></li>
+                </ul>
+              </div>
+          </div><!-- End Container-->
+        </nav><!-- End navbar -->
         <div id="wrapper">
             <h1>Hui Xie</h1>
             <h2>Design, Code &amp; Things in Between&nbsp;</h2>
-            <p><a href="http://blog.evanyou.me" target="_blank">Blog</a></p>
-            <p><a href="https://twitter.com/youyuxi" target="_blank">Twitter</a></p>
-            <p><a href="https://github.com/yyx990803" target="_blank">Github</a></p>
-            <p><a href="http://weibo.com/arttechdesign" target="_blank">微博</a></p>
-            <p><a href="https://www.zhihu.com/people/evanyou/" target="_blank">知乎</a></p>
+            <p><a href="" target="_blank">Blog</a></p>
+            <p><a href="https://twitter.com/" target="_blank">Project</a></p>
+            <p><a href="https://github.com/Xie-Hui" target="_blank">Github</a></p>
         </div>
         <canvas></canvas>
-        <script>
-            document.addEventListener('touchmove', function (e) {
-                e.preventDefault()
-            })
-            var c = document.getElementsByTagName('canvas')[0],
-                x = c.getContext('2d'),
-                pr = window.devicePixelRatio || 1,
-                w = window.innerWidth,
-                h = window.innerHeight,
-                f = 90,
-                q,
-                m = Math,
-                r = 0,
-                u = m.PI*2,
-                v = m.cos,
-                z = m.random
-            c.width = w*pr
-            c.height = h*pr
-            x.scale(pr, pr)
-            x.globalAlpha = 0.6
-            function i(){
-                x.clearRect(0,0,w,h)
-                q=[{x:0,y:h*.7+f},{x:0,y:h*.7-f}]
-                while(q[1].x<w+f) d(q[0], q[1])
-            }
-            function d(i,j){
-                x.beginPath()
-                x.moveTo(i.x, i.y)
-                x.lineTo(j.x, j.y)
-                var k = j.x + (z()*2-0.25)*f,
-                    n = y(j.y)
-                x.lineTo(k, n)
-                x.closePath()
-                r-=u/-50
-                x.fillStyle = '#'+(v(r)*127+128<<16 | v(r+u/3)*127+128<<8 | v(r+u/3*2)*127+128).toString(16)
-                x.fill()
-                q[0] = q[1]
-                q[1] = {x:k,y:n}
-            }
-            function y(p){
-                var t = p + (z()*2-1.1)*f
-                return (t>h||t<0) ? y(p) : t
-            }
-            document.onclick = i
-            document.ontouchstart = i
-            i()
-        </script>
+        <script type='text/javascript' src='js/animated_background.js'></script>
     </body>
 </html>
