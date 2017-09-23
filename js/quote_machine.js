@@ -25,17 +25,16 @@ var getQuote = function(){
 
             quote = ('"' + $(post.content).html() + '"  ' + post.title);//console.log(quote);
 
-            $('#quote-author').text(post.title);
-            $('#quote-text').html(post.content);
-
-            $('#twitter-share-button').attr("href",twitterPrefix+encodeURIComponent(quote)); //change twitter intent default
-            //console.log($(".twitter-share-button").html());
-            // If the Source is available, use it. Otherwise hide it.
-            if (typeof post.custom_meta !== 'undefined' && typeof post.custom_meta.Source !== 'undefined') {
-                $('#quote-source').html('Source:' + post.custom_meta.Source);
-            } else {
-                $('#quote-source').text('');
-            }
+            $('#quote-text, #quote-author, #quote-mark').animate({
+                opacity: 0
+            }, 500,
+            function (){
+                $(this).animate({
+                    opacity: 1
+                }, 500);
+                $('#quote-text').html(post.content)
+                $('#quote-author').html("- " + post.title)
+            })
         },
         cache: false,
         error: function(){
@@ -46,5 +45,5 @@ var getQuote = function(){
 //$(".twitter-share-button").attr("href", twitterPrefix+quote)
 $(document).ready(function(){
     getQuote(); //initial quote
-    $("#get-another-quote").on("click", getQuote); //change Quote when click on botton
+    $(document).click(getQuote); //change Quote when click on screen
     });

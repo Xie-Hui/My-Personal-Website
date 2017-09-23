@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 html, body {
     overflow: hidden;
     margin: 0;
@@ -5,6 +6,7 @@ html, body {
 body {
     font-family: 'Open Sans', 'Helvetica Neue', 'Hiragino Sans GB', 'LiHei Pro', Arial, sans-serif;
     color: #fff;
+    background-color: #111;
 }
 canvas {
 	position: absolute;
@@ -66,71 +68,36 @@ a:hover {
         border: none;
         border-radius: 0;
         background-color: rgba(0,0,0,0.5);
-    }
+}
 
 ul.dropdown-menu{
   background-color: rgba(0,0,0,0.8);
+ }
 
 .quote-box {
+    margin:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Raleway', sans-serif;
+    font-weight:900;
+    color:white;
     border-radius:10px;
-    position:relative;
-    margin:8% auto auto auto;
-    width:450px;
-    padding:40px 50px;
+
     display:table;
-    background-color:#87CEFA;
+    background-color:rgba(0,0,0,0);
 }
-.quote-content {
+.quote-content p{
     text-align:left;
-    width:450px;
     height:auto;
     clear:both;
-    font-weight:400;
-    font-size:4em;
-    color:white;
+    font-size:1.5em;
 }
 .quote-title {
-    width:450px;
     height:auto;
     clear:both;
     padding-top:20px;
     font-size:1em;
     text-align:right;
-    color:white;
-}
-
-.buttons {
-    width:450px;
-    margin:auto;
-    display:block;
-}
-.button {
-    height:38px;
-    border:none;
-    border-radius:3px;
-    color:#333;
-    background-color:#fff;
-    outline:none;
-    font-size:0.85em;
-    padding: 8px 18px 6px 18px;
-    margin-top:30px;
-    opacity:1;
-    cursor:pointer;
-    }
-}
-.button:hover {
-    opacity: 0.4;
-}
-#twitter-share-button {
-    float:left;
-    padding:0px;
-    padding-top:8px;
-    text-align:center;
-    font-size:1.2em;
-    margin-right:5px;
-    height:30px;
-    width:40px;
-}
-#get-another-quote {
-    float:right;
 }

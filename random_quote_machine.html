@@ -11,13 +11,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://use.fontawesome.com/4644892e4e.js"></script>
-        <script src="js/quote_machine.js"></script>
         <link href='css/style.css' rel="stylesheet" type='text/css'>
     </head>
     <body>
         <!-- Navbar -->
         <!-- Navbar -->
-        <nav class="navbar navbar-default navbar-fixed-top" id="my-navbar">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
             <div class="container">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
@@ -26,7 +25,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">HOME</a>
+                <a class="navbar-brand" href="index.html" target="">HOME</a>
               </div>
               <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -39,36 +38,29 @@
                             <li><a href="#tribute-page">Tribute Page</a></li>
                             <li role="separator" class="divider"></li>
                             <li class="dropdown-header">Web</li>
-                            <li><a href="#flip-crash-app">Flip Crash</a></li>
+                            <li><a href="particles.html">Particle Network</a></li>
+                            <li><a href="random_quote_machine.html">Quote Machine</a></li>
                             <li role="separator" class="divider"></li>
                             <li class="dropdown-header">Desktop</li>
                             <li><a href="#grapher">Graphing Utility</a></li>
                         </ul>
                     </li>
-                    <li><a href="#project">PROJECT</a></li>
                     <li><a href="#about">ABOUT</a></li>
                 </ul>
               </div>
           </div><!-- End Container-->
-        </nav><!-- End navbar -->
+      </nav><!-- End navbar -->
         <div id="quote machine">
             <div class="quote-box">
                 <div class="quote-content">
                     <i class="fa fa-quote-left" aria-hidden="true" id="quote-mark"></i>
                     <span id="quote-text"></span>
                 </div>
-            <div class="quote-title">
-                - <span id="quote-author"></span>
-            </div>
-            <div class="buttons">
-                <a id="twitter-share-button" class="button" title="Tweet this quote" href="https://twitter.com/share">
-                   <i class="fa fa-twitter"></i>
-                </a>
-                <button class="button" id="get-another-quote">
-                    Get a new quote
-                </button>
+                <div class="quote-title">
+                    <span id="quote-author"></span>
+                </div>
             </div>
         </div>
-        </div>
+        <script src="js/quote_machine.js"></script>
     </body>
 </html>
