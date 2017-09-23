@@ -12,7 +12,7 @@ tick = 0, //Tick in time
 opts = { //Options, you can change those
 	backgroundColor: "#222",
 	particleColor: "#fcfcfc",
-	particleAmount: 40,
+	particleAmount: Math.floor((w * h / 650000) * 40), //the initial starting number of points depent on the screen
 	defaultSpeed: 1,
 	addedSpeed: 2,
 
