@@ -1,0 +1,13 @@
+// loads complete ionicons styles
+//@import 'ionicons-webpack';
+
+
+//helpers
+@import "helpers/_animations.scss";
+@import "helpers/_variables.scss";
+//@import "helpers/imagehover.css-master/scss/imagehover.scss";
+
+//layout
+@import "layout/_main_page.scss";
+@import "layout/_project_page.scss";
+@import "layout/_footer.scss";

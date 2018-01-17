@@ -1,0 +1,30 @@
+/* variables */
+
+// colours
+$lightGrey: #fafafa;
+$midGrey: #ccc;
+$darkGrey: #343434;
+$black: #111;
+//$limeGreen: #00FC87;
+
+$limeGreen: #03D176;
+
+
+
+// typography
+$lato: 'Lato', sans-serif;
+$oswald: 'Oswald', sans-serif;
+$Ionicons:'Ionicons';
+
+// padding
+.nopadding {
+  padding: 0;
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 700px,
+  lg: 992px,
+  xl: 1200px
+) !default;
