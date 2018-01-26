@@ -1,0 +1,109 @@
+#project {
+  padding: 5% 15%;
+  top: 10%;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+  .project-header {
+    $width: 100vw;
+    $height: 100vh;
+    padding: 5% 0 0;
+    h1 {
+    	$font--size--calc: calc(2vw + 20px);
+      color: $lightGrey;
+      font-family: $brandon_regular;
+      text-transform: uppercase;
+      font-size: $font--size--calc;
+    }
+    h2 {
+      $font--size--calc: calc(1vw + 10px);
+      color: darken($midGrey, 30%);
+      font-family: $brandon_light;
+      font-size: $font--size--calc;
+    }
+  }
+  .cover-image {
+    display: block;
+    height: auto;
+    width: 100%;
+    object-fit: scale-down;
+    max-height: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+    padding: 0;
+  }
+  .project-info {
+    margin-bottom: 10%;
+    color: darken($midGrey,30%);
+    line-height: 1.5em;
+    letter-spacing: 1px;
+    padding: 0;
+    $width: 100vw;
+  	$height: 100vh;
+  	$font--size--calc: calc(1vw + 5px);
+    font-family: $brandon_italic;
+    font-size: $font--size--calc;
+  }
+
+  .project-content{
+    .section-entry {
+      $font--size--calc: calc(2vw + 8px);
+      font-family: $brandon_bold;
+      text-transform: uppercase;
+      font-size: $font--size--calc;
+      color: $midGrey;
+      padding: 0;
+      margin-left: 0;
+      margin-bottom: 0.5em;
+    }
+    .section-description {
+      $font--size--calc: calc(1vw + 8px);
+      font-size: $font--size--calc;
+      color: $darkGrey;
+      padding: 0;
+      margin-left: 0;
+      margin-bottom: 0.5em;
+    }
+    hr {
+      display: block;
+      position: relative;
+      height: 1px;
+      margin: 0.5em 0 1em;
+      width: 50%;
+      background-color: $darkGrey;
+      border: 0;
+    }
+    ul {
+      font-family: $brandon_regular;
+      list-style: circle;
+      padding: 0 1.5em;
+      margin-bottom: 0.5em;
+      li {
+
+        display: list-item;
+        text-align: -webkit-match-parent;
+      }
+    }
+    p {
+      margin-bottom: 1em;
+      color: $darkGrey;
+      line-height: 1.5em;
+      letter-spacing: 1px;
+      padding: 0;
+      $width: 100vw;
+      $height: 100vh;
+      $font--size--calc: calc(1vw + 8px);
+      font-family: $brandon_regular;
+      font-size: $font--size--calc;
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    vertical-align: middle;
+    padding: 5% 0;
+  }
+}

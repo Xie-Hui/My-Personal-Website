@@ -1,19 +1,59 @@
 /* variables */
 
 // colours
+$white: #fff;
 $lightGrey: #fafafa;
 $midGrey: #ccc;
-$darkGrey: #343434;
+$darkGrey: #676767;
 $black: #111;
+$darkCyan: #009687;
 //$limeGreen: #00FC87;
 
 $limeGreen: #03D176;
 
+/* Importing the wonderful Sosa icon font by  ========== */
+//@font-face { font-family:'icon'; src: url('https://www.bennettfeely.com/wp-content/themes/awesometheme/fonts/sosa.woff'); }
 
+
+//local fonts
+@font-face {
+    font-family: "Brandon Bold";
+    src: url("../../fonts/brandon/Brandon-Bold.otf");
+}
+//local fonts
+@font-face {
+    font-family: "Brandon Light";
+    src: url("../../fonts/brandon/Brandon-Light.otf");
+}
+//local fonts
+@font-face {
+    font-family: "Brandon Regular";
+    src: url("../../fonts/brandon/Brandon-Regular.otf");
+}
+//local fonts
+@font-face {
+    font-family: "Brandon Thin";
+    src: url("../../fonts/brandon/Brandon-Thin.otf");
+}
+//local fonts
+@font-face {
+    font-family: "Brandon Italic";
+    src: url("../../fonts/brandon/Brandon-RegularItalic.otf");
+}
 
 // typography
+$brandon_bold: "Brandon Bold", sans-serif;
+$brandon_light: "Brandon Light", sans-serif;
+$brandon_regular: "Brandon Regular", sans-serif;
+$brandon_thin: "Brandon Thin", sans-serif;
+$brandon_italic: "Brandon Italic", sans-serif;
+
+
 $lato: 'Lato', sans-serif;
+$teko: 'Teko', sans-serif;
 $oswald: 'Oswald', sans-serif;
+$rajdhani: 'Rajdhani', sans-serif;
+
 $Ionicons:'Ionicons';
 
 // padding

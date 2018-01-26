@@ -10,6 +10,7 @@ var Demo = function (element) {
     easing: 'cubic-bezier(0.165, 0.840, 0.440, 1.000)', // easeOutQuart
     speed: 300,
     sizer: element.querySelector('.my-sizer-element'),
+    isCentered: false
   });
 
   // Log events.
@@ -53,7 +54,7 @@ Demo.prototype.addFilterButtons = function () {
   }
 
   var filterButtons = Array.from(options.children);
-  console.log('filterButtons:', filterButtons);
+  //console.log('filterButtons:', filterButtons);
 
   filterButtons.forEach(function (button) {
     button.addEventListener('click', this._handleFilterClick.bind(this), false);
@@ -116,4 +117,6 @@ Demo.prototype._removeActiveClassFromChildren = function (parent) {
 
 document.addEventListener('DOMContentLoaded', function () {
   window.demo = new Demo(document.querySelector('.my-shuffle-container'));
+  window.demo.shuffle.layout();
+  //window.demo.shuffle.update();
 });

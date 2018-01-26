@@ -6,52 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hui-Xie</title>
     <link href='css/main.css' rel="stylesheet" type='text/css'>
+    <script src='https://unpkg.com/shufflejs@5'></script>
+
   </head>
   <body>
-    <!-- Navbar -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="my-navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button> -->
-          <a class="navbar-brand" href="index.html" target="">HX</a>
-        </div>
-        <!--
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PROJECT<span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li class="dropdown-header">Design</li>
-                <li><a href="#panda">Panda</a></li>
-                <li><a href="#mvp-landing">MVP Landing</a></li>
-                <li><a href="#tribute-page">Tribute Page</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Web</li>
-                <li><a href="particles.html">Particle Network</a></li>
-                <li><a href="random_quote_machine.html">Quote Machine</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Desktop</li>
-                <li><a href="#grapher">Graphing Utility</a></li>
-              </ul>
-            </li>
-            <li><a href="#about">ABOUT</a></li>
-          </ul>
-        </div>
-      </div>-->
-    </nav><!-- End navbar -->
+    <!-- Menu-icon -->
+
+    <div class="menu-icon">
+      <span class="menu-icon__line menu-icon__line-left"></span>
+    	<span class="menu-icon__line"></span>
+    	<span class="menu-icon__line menu-icon__line-right"></span>
+    </div>
+
+    <!-- End of Menu-icon -->
+
+    <!-- Menu -->
+    <div class="nav">
+      <div class="nav__content">
+        <ul class="nav__list">
+          <ul class="nav__list-entry"><li class="nav__list-item"><a href="index.html">Home</a></li></ul>
+          <ul class="nav__list-entry"><li class="nav__list-item"><a href="portfolio.html">Portfolio</a></li></ul>
+          <ul class="nav__list-entry"><li class="nav__list-item"><a href="about.html">About</a></li></ul>
+        </ul>
+      </div>
+    </div>
+    <!-- End of Menu -->
+
+
+
     <canvas id="canvas"></canvas> <!-- background animation -->
     <script src="js/main.js"></script>
-    <div id="wrapper">
+    <div id="wrapper" class="wrapper">
         <h1>Hui Xie</h1>
         <h2>Design &amp Code&nbsp;</h2>
-        <p><a href="project.html">Project</a></p>
-        <p><a href="https://github.com/Xie-Hui" target="_blank">Github</a></p>
+        <p><span class="fancy"><a href="portfolio.html">Portfolio</a></span></p>
+        <p><span class="fancy"><a href="https://github.com/Xie-Hui" target="_blank">Github</a></span></p>
         <!--<p><a href="https://twitter.com/" target="_blank">Behance</a></p>-->
     </div>
   </body>

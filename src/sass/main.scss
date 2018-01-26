@@ -8,6 +8,11 @@
 //@import "helpers/imagehover.css-master/scss/imagehover.scss";
 
 //layout
+@import "layout/_navigation.scss";
 @import "layout/_main_page.scss";
-@import "layout/_project_page.scss";
+@import "layout/_portfolio.scss";
 @import "layout/_footer.scss";
+
+@import "layout/_project.scss";
+@import "layout/_about.scss";
+@import "layout/_contact.scss";

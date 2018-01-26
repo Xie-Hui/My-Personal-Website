@@ -1,13 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
-
 html {
   overflow: visible;
   width: 100%;
   margin: 0;
   body {
-      font-family: $lato;
-      color: #fff;
+      font-family: $brandon_regular;
       background-color: $black;
+      color: $darkGrey;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      min-height: 100%;
+
   }
 }
 
@@ -21,6 +24,7 @@ canvas {
     position: absolute;
     left: 0;
     width: 320px;
+
     text-align: center;
     top: 55%;
     left: 50%;
@@ -29,21 +33,36 @@ canvas {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+
 }
 
+.nav-active {
+  #wrapper {
+    opacity: 0;
+  }
+}
 
 h1 {
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-    letter-spacing: 9px;
+    $font--size--calc: calc(2vw + 25px);
+    color: $lightGrey;
+    font-family: $brandon_regular;
+    font-size: $font--size--calc;
+    letter-spacing: 10px;
     text-transform: uppercase;
     margin: 12px 0;
     left: 4px;
 }
 h2 {
-    color: #999;
-    font-weight: normal;
+    $font--size--calc: calc(2vw + 10px);
+    font-family: $brandon_light;
+    font-size: $font--size--calc;
+    color: $midGrey;
     font-size: 15px;
     letter-spacing: .12em;
     margin-bottom: 30px;
@@ -53,28 +72,47 @@ h1, h2 {
     position: relative;
 }
 p {
+    color: $midGrey;
     font-size: 14px;
     line-height: 2em;
     margin: 0;
     letter-spacing: 2px;
 }
 
+
 a {
-    color: #999;
-    text-decoration: none;
-    transition: color .2s ease;
-}
-a:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-.navbar{
-        border: none;
-        border-radius: 0;
-        background-color: rgba(0,0,0,0.5);
+  //color: darken($midGrey, 20);
+  color: $midGrey;
+  font-family: $brandon_regular;
+  text-decoration: none;
+  &:hover, &:active {
+    color:$lightGrey;
+    //color:#fff;
+    transition:.7s;
+  }
 }
 
-ul.dropdown-menu{
-  background-color: rgba(0,0,0,0.8);
- }
+
+
+.fancy {
+    $slide-color: $black;
+    $slide-padding-vertical: 2px;
+    $slide-padding-horizontal: 5px;
+    padding: $slide-padding-vertical 0;
+    box-shadow: inset 0 0 0 0 $slide-color;
+  	transition: all 0.7s;
+    a {
+      padding: $slide-padding-vertical $slide-padding-horizontal;
+      box-shadow: inset 0 0 0 0 rgba(100,100,100,0.2);
+    	transition: all 0.7s;
+			transition-delay: 0.1s;
+    }
+    &:hover {
+			//color: $lightGrey;
+      a {
+        box-shadow: inset 300px 0 0 0 rgba(100,100,100,0.2);
+      }
+  		box-shadow: inset -300px 0 0 0 rgba(100,100,100,0.2);
+  		//color: $darkGrey;
+  	}
+}
