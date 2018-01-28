@@ -55,7 +55,8 @@ h1 {
     font-size: $font--size--calc;
     letter-spacing: 10px;
     text-transform: uppercase;
-    margin: 12px 0;
+    margin: 12px 0 0 0;
+    padding: 0;
     left: 4px;
 }
 h2 {
@@ -65,7 +66,8 @@ h2 {
     color: $midGrey;
     font-size: 15px;
     letter-spacing: .12em;
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 40px;
     left: 3px;
 }
 h1, h2 {

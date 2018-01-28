@@ -9,12 +9,15 @@ $(".menu-toggle").on('click', function() {
 const app = (() => {
 	let body;
 	let menu;
+	let menu_bar;
 	let menuItems;
   let wrapper;
 
 	const init = () => {
 		body = document.querySelector('body');
 		menu = document.querySelector('.menu-icon');
+		menu_bar = menu.firstElementChild;
+		console.log("menu-bar: ", menu_bar);
 		menuItems = document.querySelectorAll('.nav__list-item');
     //wrapper = document.querySelector('#wrapper');
 
@@ -24,6 +27,7 @@ const app = (() => {
 	const applyListeners = () => {
 		menu.addEventListener('click', () => {
       toggleClass(body, 'nav-active');
+			toggleClass(menu_bar, 'menu-active');
       //toggleClass(wrapper, 'hidden')
     });
 	}

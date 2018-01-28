@@ -1,36 +1,136 @@
-
-//default state
-.menu-icon{
+//grid icon
+.grid-icon {
 	$size: 30px;
 	height: $size;
 	width: $size;
 	position: fixed;
 	z-index:2;
-	right: 50px;
+	left: 5%;
+	top: 30px;
+	padding: 10px;
+
+	$icon-color: $darkGrey;
+	$highlight-color: lighten($icon-color, 50%);
+
+	cursor: pointer;
+	//border-radius:4px;
+	//margin:2em;
+	//width:6em;
+	//height:6em;
+	display:-webkit-inline-flex;
+	align-items:center;
+	justify-content:center;
+	transition:.2s;
+	> span {
+		transition:.2s;
+		background:$icon-color;
+		width:.4em;
+		height:.4em;
+		box-shadow:-.6em -.6em $icon-color, 0 -.6em $icon-color, .6em -.6em $icon-color, -.6em 0 $icon-color, .6em 0 $icon-color, -.6em .6em $icon-color, 0 .6em $icon-color, .6em .6em $icon-color;
+	}
+	&:hover {
+		> span {
+			background: $highlight-color;
+			box-shadow:-.8em -.8em $highlight-color, 0 -.8em $highlight-color, .8em -.8em $highlight-color, -.8em 0 $highlight-color, .8em 0 $highlight-color, -.8em .8em $highlight-color, 0 .8em $highlight-color, .8em .8em $highlight-color;
+		}
+	}
+}
+
+//menu-icons
+
+.menu-icon {
+	$icon-color: $darkGrey;
+	$highlight-color: $midGrey;
+	$transition-time: 0.3;
+	$icon--bar--height: 2px;
+	$icon--bar--width: 30px;
+	$icon--bar--spacing: 8px;
+	$hover--distance: $icon--bar--spacing/2;
+	$transition--easing: cubic-bezier(.77,0,.175,1);
+
+	height: $icon--bar--height + $icon--bar--spacing*2;
+	width: $icon--bar--width;
+	position: fixed;
+	padding: 10px;
+	z-index:2;
+	right: 5%;
 	top: 30px;
 	cursor: pointer;
-  opacity: 0.8;
-  transition: 0.3s;
-	&__line {
-		height: 2px;
-		width: $size;
-		display: block;
-		margin-bottom: 4px;
-    background-color: $lightGrey;
-		transition: transform .2s ease, background-color .5s ease;
-	}
-	&__line-left {
-		width: $size/2;
-	}
-	&__line-right {
-		width: $size/2;
-		float: right;
+  -webkit-transition: all $transition-time + s;
+	transition: all $transition-time + s;
+
+	& > .menu-bar {
+		&,
+		&:before,
+		&:after {
+			height: $icon--bar--height;
+			width: $icon--bar--width;
+		}
+		position: absolute;
+		transform: translateY($icon--bar--spacing);
+		background: rgba($icon-color, 1);
+		transition: all 0ms 300ms;
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: $icon--bar--spacing;
+			background: rgba($icon-color, 1);
+			transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: $icon--bar--spacing;
+			background: rgba($icon-color, 1);
+			//transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		&.menu-active {
+			background: rgba($highlight-color, 0);
+			&:after {
+				background: rgba($highlight-color, 1);
+				top: 0;
+				transform: rotate(45deg);
+				transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+			}
+			&:before {
+				background: rgba($highlight-color, 1);
+				bottom: 0;
+				transform: rotate(-45deg);
+				transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+			}
+		}
 	}
 
-  &:hover {
-    opacity: 1;
-  }
+	&:hover {
+		& > .menu-bar {
+			&:not(.menu-active) {
+				background: rgba($highlight-color, 1);
+				transform: translateY($icon--bar--spacing);
+				transition: all $transition--easing 0.3s;
+
+				&:before {
+					background: rgba($highlight-color, 1);
+					transform: translateY(-$icon--bar--spacing*0.5);
+					transition: all $transition--easing 0.3s;
+				}
+				&:after {
+					background: rgba($highlight-color, 1);
+					transform: translateY($icon--bar--spacing*0.5);
+					transition: all $transition--easing 0.3s;
+				}
+			}
+		}
+	}
+
 }
+
+
+
+
+
 
 .nav{
 	$width: 100vw;
@@ -92,7 +192,7 @@
     opacity: 0;
 		transition: opacity .2s ease, transform .3s ease;
 		margin-right: 25px;
-		
+
     &:before{
 			content: "";
 			position: absolute;
@@ -122,6 +222,7 @@
 body.nav-active{
 	$menu--items--count: 4;
   $transition--length: 0.5;
+	/**
 	.menu-icon{
 		&__line{
 			background-color: $lightGrey;
@@ -134,7 +235,8 @@ body.nav-active{
 			transform: translateX(-2px) rotate(45deg);
 		}
 	}
-	.nav{
+	*/
+	.nav {
 		visibility:visible;
     z-index: 1;
 		&:before,&:after{
