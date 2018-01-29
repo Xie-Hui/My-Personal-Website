@@ -222,20 +222,6 @@
 body.nav-active{
 	$menu--items--count: 4;
   $transition--length: 0.5;
-	/**
-	.menu-icon{
-		&__line{
-			background-color: $lightGrey;
-			transform: translateX(0px) rotate(-45deg);
-		}
-		&__line-left{
-			transform: translateX(1px) rotate(45deg);
-		}
-		&__line-right{
-			transform: translateX(-2px) rotate(45deg);
-		}
-	}
-	*/
 	.nav {
 		visibility:visible;
     z-index: 1;

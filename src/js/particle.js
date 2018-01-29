@@ -10,8 +10,9 @@ tick = 0, //Tick in time
 
 //YOU CAN CHANGE OPTIONS HERE. DO NOT REALLY MESS WITH STUFF BELOW THAT
 opts = { //Options, you can change those
-	backgroundColor: "#111",
-	particleColor: "#fcfcfc",
+	backgroundColor: "#121212",
+	//particleColor: "#fcfcfc",
+	particleColor: "#ababab",
 	particleAmount: Math.floor((w * h / 650000) * 40), //the initial starting number of points depent on the screen
 	defaultSpeed: 1,
 	addedSpeed: 0.5, //the maximum variation of the speed

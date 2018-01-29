@@ -16,7 +16,7 @@ const app = (() => {
 	const init = () => {
 		body = document.querySelector('body');
 		menu = document.querySelector('.menu-icon');
-		menu_bar = menu.firstElementChild;
+		menu_bar = document.querySelector('.menu-bar');;
 		console.log("menu-bar: ", menu_bar);
 		menuItems = document.querySelectorAll('.nav__list-item');
     //wrapper = document.querySelector('#wrapper');
