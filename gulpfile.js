@@ -9,6 +9,7 @@ const gulp                = require('gulp'),
       babel               = require('gulp-babel'),
       uncss               = require('gulp-uncss'),
       browserSync         = require('browser-sync').create();
+      del                 = require('del');
 
 gulp.task('css', function(){
   return gulp.src([
@@ -66,6 +67,10 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 })
 
+gulp.task('clean', function() {
+  return del.sync('dist');
+})
+
 gulp.task('browserSync', function(){
   browserSync.init({
     server: {
@@ -78,4 +83,8 @@ gulp.task('watch', ['browserSync', 'copy', 'images', 'fonts', 'vender', 'css'], 
   gulp.watch('src/sass/**/*.scss', ['css']);
   gulp.watch('src/**/*.+(html|js)', ['copy']);
   gulp.watch('src/img/**/*', ['images']);
+})
+
+gulp.task('build', [`clean`, 'copy', 'images', 'fonts', 'vender', 'css'], function (){
+  console.log('Building files');
 })
