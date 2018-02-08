@@ -11,8 +11,8 @@ tick = 0, //Tick in time
 //YOU CAN CHANGE OPTIONS HERE. DO NOT REALLY MESS WITH STUFF BELOW THAT
 opts = { //Options, you can change those
 	backgroundColor: "#121212",
-	//particleColor: "#fcfcfc",
-	particleColor: "#ababab",
+	particleColor: "#fcfcfc",
+	//particleColor: "#bcbcbc",
 	particleAmount: Math.floor((w * h / 650000) * 40), //the initial starting number of points depent on the screen
 	defaultSpeed: 1,
 	addedSpeed: 0.5, //the maximum variation of the speed
@@ -27,9 +27,10 @@ particles = [],
 Particle = function(Xpos, Ypos){
 	this.x = Xpos ? Xpos : Math.random()*w; //If there is not position stated, it takes a random position
 	this.y = Ypos ? Ypos : Math.random()*h; //Same here
-    this.radius = opts.defaultRadius + Math.random()*opts.addedRadius; //Radius + a bit of random radius
+  this.radius = opts.defaultRadius + Math.random()*opts.addedRadius; //Radius + a bit of random radius
 	this.speed = Math.pow(opts.defaultRadius/this.radius, 6) * opts.defaultSpeed + Math.random()*opts.addedSpeed; //Speed that reversed to thedot size + a bit of random one
 	this.directionAngle = Math.floor(Math.random()*360); //The angle of this particle its moving. !!!! TRUE ONLY ON INIT
+
 	this.color = opts.particleColor;
 	this.d = { //Object, stores directions. Computes directions according to the random this.directionAngle
 		x: Math.cos(this.directionAngle)*this.speed,
