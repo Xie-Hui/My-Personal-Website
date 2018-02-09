@@ -13,6 +13,10 @@
   -ms-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
   h2 {
       position: relative;
       $font--size--calc: calc(1vw + 15px);
